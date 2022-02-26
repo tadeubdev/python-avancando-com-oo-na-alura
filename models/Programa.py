@@ -1,3 +1,6 @@
+from abc import abstractmethod
+
+
 class Programa:
     def __init__(self, nome, ano):
         self.nome = nome
@@ -23,6 +26,6 @@ class Programa:
     def nome(self, nome):
         self.__nome = nome.title()
 
+    @abstractmethod
     def __str__(self):
-        return f'{self.nome} - {self.ano} - {self.likes} likes'
-
+        pass
